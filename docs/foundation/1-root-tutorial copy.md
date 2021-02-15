@@ -20,7 +20,7 @@ Prerequisites:
 
 Steps:
 
-<iframe width="720" height="418" src="https://www.youtube.com/embed/WP9bf4k5EfY" frameborder="0" allowfullscreen></iframe>
+<iframe width="720" height="418" src="https://www.youtube.com/embed/kPxM4PAiSAc" frameborder="0" allowfullscreen></iframe>
 
 1. Login to AWS console.
 2. Go to Services and type "CloudFormation".
