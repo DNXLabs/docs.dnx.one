@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Tools
-nav_order: 4
+title: CLI
+nav_order: 2
 has_children: true
 ---
 
-## Tools
+# CLI
+

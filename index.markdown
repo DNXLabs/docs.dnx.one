@@ -1,8 +1,9 @@
 ---
 layout: home
+nav_order: 1
 ---
 
-## Docs DNX One
+# Docs DNX One
 ---
 
 At DNX we help your business build better solutions by upgrading how delivery is done, leaving behind manual processes and embracing an automated, cloud-native way of working.
