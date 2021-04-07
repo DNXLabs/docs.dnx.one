@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5. Configure OpenVPN
+title: 6. Configure ACM Certificates
 parent: Foundation
 nav_order: 5
 has_children: true
