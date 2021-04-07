@@ -2,17 +2,17 @@
 layout: default
 title: 6. Configure ACM Certificates
 parent: Foundation
-nav_order: 5
+nav_order: 6
 has_children: true
 ---
 
 ## DNX Tutorial - How to create ACM certificates
+
 | Version  | 1.0             |
 | -------- | --------------- |
 | Author   | Marcus Nogueira |
 | Revision | Pietro Marmelo  |
 
-## 
 
 To enhance the security of the environment, Well Architected Foundation needs valid certificates. AWS offers this service free of charge for services that are within its infrastructure.
 
@@ -53,9 +53,9 @@ This document is intended to demonstrate the steps to create the certificates ne
 7. When you finish adding names, choose **Next**.
 
 8. On the **Select validation method page**, choose either DNS validation or Email validation, depending on your needs. If you are able to edit your DNS configuration, we recommend that you use DNS domain validation rather than email validation.
-   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request. You can use either email validation or DNS validation. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name. You or an authorized representative must reply to one of these email messages. For more information, see [ ](https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html&sa=D&ust=1607401296691000&usg=AOvVaw2RrLnYWfP_AQvUrP16kJoc)[Using Email to Validate Domain Ownership](https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html&sa=D&ust=1607401296692000&usg=AOvVaw0LestBSdxPTvFPd01eLtbr). If you use DNS validation, you need to add a CNAME record provided by ACM to your DNS configuration. For more information about DNS validation, see [ Using DNS to Validate Domain Ownership](https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html&sa=D&ust=1607401296692000&usg=AOvVaw3T_wrwT6w7iC0qFHA1f_GS).
+   Before ACM issues a certificate, it validates that you own or control the domain names in your certificate request. You can use either email validation or DNS validation. If you choose email validation, ACM sends validation email to three contact addresses registered in the WHOIS database and to five common system administration addresses for each domain name. You or an authorized representative must reply to one of these email messages. For more information, see [Using Email to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html). If you use DNS validation, you need to add a CNAME record provided by ACM to your DNS configuration. For more information about DNS validation, see [ Using DNS to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html).
 
-9. On the **Add tags page**, you can optionally tag your certificate. Tags are key/value pairs that serve as metadata for identifying     and organizing AWS resources. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager Certificates](https://www.google.com/url?q=https://docs.aws.amazon.com/acm/latest/userguide/tags.html&sa=D&ust=1607401296693000&usg=AOvVaw262Aa-H_jjft5GHjU1l9Tk).
+9. On the **Add tags page**, you can optionally tag your certificate. Tags are key/value pairs that serve as metadata for identifying     and organizing AWS resources. For a list of ACM tag parameters and for instructions on how to add tags to certificates after creation, see [Tagging AWS Certificate Manager Certificates](https://docs.aws.amazon.com/acm/latest/userguide/tags.html).
 
 10. When you finish adding tags, choose **Review**.
 
