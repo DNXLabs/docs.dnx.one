@@ -65,10 +65,15 @@ Follow these steps to enable Azure AD SSO in the Azure portal.
 
 A suggestion for this field:
 
-- _ **Shared-Service app =** _ _ **https://signin.aws.amazon.com/saml#shared** _
-- _ **Non-prod app =** _ _ **https://signin.aws.amazon.com/saml#nonprod** _
-- _ **Prod app =** _ _ **https://signin.aws.amazon.com/saml#prod** _
-- _ **Audit app =** _ _ **https://signin.aws.amazon.com/saml#audit** _
+| Account Name  |            URL
+| --- | --- |
+| Master app | **https://signin.aws.amazon.com/saml#**
+| Shared-Service app | **https://signin.aws.amazon.com/saml#shared**|
+| Non-prod app | **https://signin.aws.amazon.com/saml#nonprod**|
+| Prod app | **https://signin.aws.amazon.com/saml#prod**|
+| Audit app | **https://signin.aws.amazon.com/saml#audit**|
+
+#
 
 We recommend this approach for the following reasons:
 
