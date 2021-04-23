@@ -22,11 +22,15 @@
 
 6. Type the role
 
- - arn:aws:iam::\&lt;AccountID\&gt;:role/AuditAccess,arn:aws:iam::\&lt;AccountID\&gt;:saml-provider/\&lt;Company Name\&gt; and press \&lt;enter\&gt;, for example,where
+ - arn:aws:iam::AccountID:role/AuditAccess,arn:aws:iam::AccountID:saml-provider/Company Name
+  and press enter
 
- - **arn:aws:iam::** \&lt;AccountID\&gt; **:role/AuditAccess - Is the arn of the role Audit Access and , arn:aws:iam::** \&lt;AccountID\&gt; **:saml-provider/** \&lt;Company Name\&gt; **- Is the ARN of the SAML**
+ **Example**
 
- - **Example: arn:aws:iam::323779265511:role/AuditAccess,arn:aws:iam::323779265511:saml-provider/raffletix-sso**
+```json
+ arn:aws:iam::012345678900:role/AuditAccess,arn:aws:iam::012345678900:saml-provider/yourcompanyname-sso**
+```
+
 
 ![Azure17](/assets/images/Azure_SSO/az_sso_17.png) 
 
