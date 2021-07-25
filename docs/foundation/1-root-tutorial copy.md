@@ -6,13 +6,14 @@ nav_order: 1
 ---
 
 # DNX ONE TUTORIAL
-_Version: 1.4_
+_Version: 1.5_
 
 _Author: Pietro Marmelo_
 
 _Revision: Pietro Marmelo_
 
 ## DNX-ROOT role for the DNX Well Architected Foundation
+### Project on-boarding
 In this tutorial, we will show how to set up the dnx-role that will give DNX secure access to create the DNX Well Architected Foundation environments and check your Master Account ID.
 
 Prerequisites:
@@ -73,3 +74,13 @@ Below is a way to know your account number.
 4. Your 12-digit account ID is listed under Account Settings.
 
 When the dnx-root role is created please notify DNX and send us the Account ID number.
+
+### Project off-boarding
+
+At the end of the project, the dnx-root Couldformation stack should be removed, removing the IAM role used by DNX during the project and preventing any access after the project is completed.
+
+1. Log in to the AWS Management Console.
+2. Go to Cloudformation and select the dnx-root stack
+3. Click on Delete option.
+
+![image](https://user-images.githubusercontent.com/50013554/126895166-c9be88a5-3951-4751-ae27-5ca5f5ebd33a.png)
