@@ -10,7 +10,7 @@ nav_order: {{ index }}
 ## {{ new.repository }} - {{ new.release }}
 {{ new.body }}
 
-{{ new.created_at }}
+Created at: {{ new.created_at }}
 
 ---
 
