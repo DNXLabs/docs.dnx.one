@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Terraform Style Guide
-parent: DevOps Playbook
-nav_order: 5
+title: Terraform
+parent: Style Guide
+nav_order: 1
 ---
 
 # Terraform Style Guide
