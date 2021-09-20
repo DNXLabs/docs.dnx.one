@@ -11,7 +11,7 @@ efficient images.
 Docker builds images automatically by reading the instructions from a
 `Dockerfile` -- a text file that contains all commands, in order, needed to
 build a given image. A `Dockerfile` adheres to a specific format and set of
-instructions which you can find at [Dockerfile reference](../../engine/reference/builder.md).
+instructions which you can find at [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 A Docker image consists of read-only layers each of which represents a
 Dockerfile  instruction. The layers are stacked and each one is a delta of the
@@ -38,7 +38,7 @@ the running container, such as writing new files, modifying existing files, and
 deleting files, are written to this writable container layer.
 
 For more on image layers (and how Docker builds and stores images), see
-[About storage drivers](../../storage/storagedriver/index.md).
+[About storage drivers](https://docs.docker.com/storage/storagedriver/).
 
 ## General guidelines and recommendations
 
@@ -243,11 +243,11 @@ EOF
 To exclude files not relevant to the build (without restructuring your source
 repository) use a `.dockerignore` file. This file supports exclusion patterns
 similar to `.gitignore` files. For information on creating one, see the
-[.dockerignore file](../../engine/reference/builder.md#dockerignore-file).
+[.dockerignore file](https://docs.docker.com/engine/reference/builder/#dockerignore-file).
 
 ### Use multi-stage builds
 
-[Multi-stage builds](multistage-build.md) allow you to drastically reduce the
+[Multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) allow you to drastically reduce the
 size of your final image, without struggling to reduce the number of intermediate
 layers and files.
 
@@ -310,14 +310,14 @@ database, and an in-memory cache in a decoupled manner.
 
 Limiting each container to one process is a good rule of thumb, but it is not a
 hard and fast rule. For example, not only can containers be
-[spawned with an init process](../../engine/reference/run.md#specify-an-init-process),
+[spawned with an init process](https://docs.docker.com/engine/reference/run/#specify-an-init-process),
 some programs might spawn additional processes of their own accord. For
 instance, [Celery](https://docs.celeryproject.org/) can spawn multiple worker
 processes, and [Apache](https://httpd.apache.org/) can create one process per
 request.
 
 Use your best judgment to keep containers as clean and modular as possible. If
-containers depend on each other, you can use [Docker container networks](../../network/index.md)
+containers depend on each other, you can use [Docker container networks](https://docs.docker.com/network/)
 to ensure that these containers can communicate.
 
 ### Minimize the number of layers
@@ -329,7 +329,7 @@ were added to reduce this limitation:
 - Only the instructions `RUN`, `COPY`, `ADD` create layers. Other instructions
   create temporary intermediate images, and do not increase the size of the build.
 
-- Where possible, use [multi-stage builds](multistage-build.md), and only copy
+- Where possible, use [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/), and only copy
   the artifacts you need into the final image. This allows you to include tools
   and debug information in your intermediate build stages without increasing the
   size of the final image.
@@ -397,7 +397,7 @@ maintainable `Dockerfile`.
 
 ### FROM
 
-[Dockerfile reference for the FROM instruction](../../engine/reference/builder.md#from)
+[Dockerfile reference for the FROM instruction](https://docs.docker.com/engine/reference/builder/#from)
 
 Whenever possible, use current official images as the basis for your
 images. We recommend the [Alpine image](https://hub.docker.com/_/alpine/) as it
@@ -406,7 +406,7 @@ being a full Linux distribution.
 
 ### LABEL
 
-[Understanding object labels](../../config/labels-custom-metadata.md)
+[Understanding object labels](https://docs.docker.com/config/labels-custom-metadata/)
 
 You can add labels to your image to help organize images by project, record
 licensing information, to aid in automation, or for other reasons. For each
@@ -446,15 +446,15 @@ LABEL vendor=ACME\ Incorporated \
       com.example.release-date="2015-02-12"
 ```
 
-See [Understanding object labels](../../config/labels-custom-metadata.md)
+See [Understanding object labels](https://docs.docker.com/config/labels-custom-metadata/)
 for guidelines about acceptable label keys and values. For information about
 querying labels, refer to the items related to filtering in
-[Managing labels on objects](../../config/labels-custom-metadata.md#manage-labels-on-objects).
-See also [LABEL](../../engine/reference/builder.md#label) in the Dockerfile reference.
+[Managing labels on objects](https://docs.docker.com/config/labels-custom-metadata/#manage-labels-on-objects).
+See also [LABEL](https://docs.docker.com/engine/reference/builder/#label) in the Dockerfile reference.
 
 ### RUN
 
-[Dockerfile reference for the RUN instruction](../../engine/reference/builder.md#run)
+[Dockerfile reference for the RUN instruction](https://docs.docker.com/engine/reference/builder/#run)
 
 Split long or complex `RUN` statements on multiple lines separated with
 backslashes to make your `Dockerfile` more readable, understandable, and
@@ -587,7 +587,7 @@ RUN set -o pipefail && wget -O - https://some.site | wc -l > /number
 
 ### CMD
 
-[Dockerfile reference for the CMD instruction](../../engine/reference/builder.md#cmd)
+[Dockerfile reference for the CMD instruction](https://docs.docker.com/engine/reference/builder/#cmd)
 
 The `CMD` instruction should be used to run the software contained in your
 image, along with any arguments. `CMD` should almost always be used in the form
@@ -601,13 +601,13 @@ python and perl. For example, `CMD ["perl", "-de0"]`, `CMD ["python"]`, or `CMD
 ["php", "-a"]`. Using this form means that when you execute something like
 `docker run -it python`, you’ll get dropped into a usable shell, ready to go.
 `CMD` should rarely be used in the manner of `CMD ["param", "param"]` in
-conjunction with [`ENTRYPOINT`](../../engine/reference/builder.md#entrypoint), unless
+conjunction with [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#entrypoint), unless
 you and your expected users are already quite familiar with how `ENTRYPOINT`
 works.
 
 ### EXPOSE
 
-[Dockerfile reference for the EXPOSE instruction](../../engine/reference/builder.md#expose)
+[Dockerfile reference for the EXPOSE instruction](https://docs.docker.com/engine/reference/builder/#expose)
 
 The `EXPOSE` instruction indicates the ports on which a container listens
 for connections. Consequently, you should use the common, traditional port for
@@ -622,7 +622,7 @@ the recipient container back to the source (ie, `MYSQL_PORT_3306_TCP`).
 
 ### ENV
 
-[Dockerfile reference for the ENV instruction](../../engine/reference/builder.md#env)
+[Dockerfile reference for the ENV instruction](https://docs.docker.com/engine/reference/builder/#env)
 
 To make new software easier to run, you can use `ENV` to update the
 `PATH` environment variable for the software your container installs. For
@@ -691,8 +691,8 @@ $ docker run --rm test sh -c 'echo $ADMIN_USER'
 
 ### ADD or COPY
 
-- [Dockerfile reference for the ADD instruction](../../engine/reference/builder.md#add)
-- [Dockerfile reference for the COPY instruction](../../engine/reference/builder.md#copy)
+- [Dockerfile reference for the ADD instruction](https://docs.docker.com/engine/reference/builder/#add)
+- [Dockerfile reference for the COPY instruction](https://docs.docker.com/engine/reference/builder/#copy)
 
 Although `ADD` and `COPY` are functionally similar, generally speaking, `COPY`
 is preferred. That’s because it’s more transparent than `ADD`. `COPY` only
@@ -743,7 +743,7 @@ auto-extraction capability, you should always use `COPY`.
 
 ### ENTRYPOINT
 
-[Dockerfile reference for the ENTRYPOINT instruction](../../engine/reference/builder.md#entrypoint)
+[Dockerfile reference for the ENTRYPOINT instruction](https://docs.docker.com/engine/reference/builder/#entrypoint)
 
 The best use for `ENTRYPOINT` is to set the image's main command, allowing that
 image to be run as though it was that command (and then use `CMD` as the
@@ -800,7 +800,7 @@ exec "$@"
 > This script uses [the `exec` Bash command](https://wiki.bash-hackers.org/commands/builtin/exec)
 > so that the final running application becomes the container's PID 1. This
 > allows the application to receive any Unix signals sent to the container.
-> For more, see the [`ENTRYPOINT` reference](../../engine/reference/builder.md#entrypoint).
+> For more, see the [`ENTRYPOINT` reference](https://docs.docker.com/engine/reference/builder/#entrypoint).
 
 The helper script is copied into the container and run via `ENTRYPOINT` on
 container start:
@@ -833,7 +833,7 @@ $ docker run --rm -it postgres bash
 
 ### VOLUME
 
-[Dockerfile reference for the VOLUME instruction](../../engine/reference/builder.md#volume)
+[Dockerfile reference for the VOLUME instruction](https://docs.docker.com/engine/reference/builder/#volume)
 
 The `VOLUME` instruction should be used to expose any database storage area,
 configuration storage, or files/folders created by your docker container. You
@@ -842,7 +842,7 @@ parts of your image.
 
 ### USER
 
-[Dockerfile reference for the USER instruction](../../engine/reference/builder.md#user)
+[Dockerfile reference for the USER instruction](https://docs.docker.com/engine/reference/builder/#user)
 
 If a service can run without privileges, use `USER` to change to a non-root
 user. Start by creating the user and group in the `Dockerfile` with something
@@ -871,7 +871,7 @@ frequently.
 
 ### WORKDIR
 
-[Dockerfile reference for the WORKDIR instruction](../../engine/reference/builder.md#workdir)
+[Dockerfile reference for the WORKDIR instruction](https://docs.docker.com/engine/reference/builder/#workdir)
 
 For clarity and reliability, you should always use absolute paths for your
 `WORKDIR`. Also, you should use `WORKDIR` instead of  proliferating instructions
@@ -880,7 +880,7 @@ maintain.
 
 ### ONBUILD
 
-[Dockerfile reference for the ONBUILD instruction](../../engine/reference/builder.md#onbuild)
+[Dockerfile reference for the ONBUILD instruction](https://docs.docker.com/engine/reference/builder/#onbuild)
 
 An `ONBUILD` command executes after the current `Dockerfile` build completes.
 `ONBUILD` executes in any child image derived `FROM` the current image.  Think
@@ -914,8 +914,8 @@ These Official Images have exemplary `Dockerfile`s:
 
 ## Additional resources:
 
-* [Dockerfile Reference](../../engine/reference/builder.md)
-* [More about Base Images](baseimages.md)
-* [More about Automated Builds](../../docker-hub/builds/index.md)
-* [Guidelines for Creating Docker Official Images](../../docker-hub/official_images.md)
+* [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+* [More about Base Images](https://docs.docker.com/develop/develop-images/baseimages/)
+* [More about Automated Builds](https://docs.docker.com/docker-hub/builds/)
+* [Guidelines for Creating Docker Official Images](https://docs.docker.com/docker-hub/official_images/)
 * [Best practices to containerize Node.js web applications with Docker](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker){:target="_blank" rel="noopener" class="_"}
