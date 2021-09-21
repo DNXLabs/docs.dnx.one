@@ -6,11 +6,10 @@ nav_order: 8
 ---
 
 # DNX ONE TUTORIAL
-| Version  |                |
-| -------- | -------------- |
-| Version  | 1.2            |
-| Author   | Pietro Marmelo |
-| Revision | Pietro Marmelo |
+| Version   | 1.2            |
+| --------  | -------------- |
+| Author    | Pietro Marmelo |
+| Revision  | Pietro Marmelo |
 
 
 
@@ -18,11 +17,11 @@ nav_order: 8
 
 In this tutorial, we will show how to enable the AWS root user MFA to protect your account. The original AWS documentation can be accessed here: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root
 
-*Prerequisites:*
+### Prerequisites:
 
 - AWS Admin Access to your AWS Master Account
 
-Steps:
+### Steps:
 
 1. Sign in to the AWS Management Console.
 2. On the right side of the navigation bar, choose your account name, and choose My Security Credentials. Then expand the Multi-Factor Authentication (MFA) section on the page.
@@ -43,11 +42,17 @@ Steps:
 
 7. In the Manage MFA Device wizard, in the **MFA Code 1 box**, enter the **six-digit number that's currently displayed by the MFA device**. **Wait up to 30 seconds** for the device to generate a new number, and then type the **new six-digit number into the MFA Code 2 box**.
 
-  *Important*
-  *Submit your request immediately after generating the codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device is out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can resync the device.*
+```
+Important
+
+Submit your request immediately after generating the codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device is out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can resync the device.
+```
 
 8. Choose **Assign MFA**, and then choose **Finish**.
 
 
-*Important*
-*Make a secure backup of the QR code or secret configuration key, or make sure that you enable multiple virtual MFA devices for your account. A virtual MFA device might become unavailable, for example, if you lose the smartphone where the virtual MFA device is hosted). If that happens, you will not be able to sign in to your account and you will have to contact customer service to remove MFA protection for the account.*
+```
+Important!
+
+Make a secure backup of the QR code or secret configuration key, or make sure that you enable multiple virtual MFA devices for your account. A virtual MFA device might become unavailable, for example, if you lose the smartphone where the virtual MFA device is hosted). If that happens, you will not be able to sign in to your account and you will have to contact customer service to remove MFA protection for the account.
+```
