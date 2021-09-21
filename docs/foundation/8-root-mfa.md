@@ -23,7 +23,7 @@ In this tutorial, we will show how to enable the AWS root user MFA to protect yo
 
 ### Steps:
 
-1. Sign in to the AWS Management Console.
+1. Sign in to the AWS Management Console using the email used to create the account.
 2. On the right side of the navigation bar, choose your account name, and choose My Security Credentials. Then expand the Multi-Factor Authentication (MFA) section on the page.
 
  ![Image](/assets/images/Root_MFA/security-credentials.png)
