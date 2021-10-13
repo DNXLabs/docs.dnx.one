@@ -77,7 +77,7 @@ File structure of a module:
 terraform-aws-ecs-alb.git
 ├── _data.tf         # data types to fetch info
 ├── _outputs.tf      # outputs of this module
-├── _variables.tf    # variables used by this stack
+├── _variables.tf    # variables used by this module
 ├── alb.tf           # defines the ALB used with the ECS cluster
 ├── ecs.tf           # defines the ECS cluster and ASG for nodes
 ├── iam.tf           # defines IAM roles and policies for ECS
