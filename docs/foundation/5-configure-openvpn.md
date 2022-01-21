@@ -7,11 +7,11 @@ has_children: true
 ---
 
 # DNX Tutorial - How To manage the OpenVPN module
-_Version: 1.2_
 
-_Author: Pietro Marmelo_
-
-_Revision: Pietro Marmelo_
+| Version  | 1.2             |
+| -------- | --------------- |
+| Author   | Pietro Marmelo  |
+| Revision | Pietro Marmelo  |
 
 ## This tutorial aims to show how to create and revoke users in SSM in order to access the Open VPN.
 
