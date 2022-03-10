@@ -31,7 +31,7 @@ Topics:
 ![OpenVPN01](/assets/images/OpenVPN_01.png)
 
 
-## Click on --> /openvpn-<Account> /USERS → Edit
+## Click on --> /openvpn-< Account> /USERS → Edit
 
 ![OpenVPN01](/assets/images/OpenVPN_02.png)
 
@@ -47,9 +47,9 @@ When a user is added, OpenVPN Server creates a ".ovpn" and ".mfa" files to an S3
 
 To download this file:
 
-1. Access AWS Console → <Account> 
+1. Access AWS Console → < Account> 
 2. S3
-3. Find a bucket called openvpn-<Account>-<random number>
+3. Find a bucket called openvpn-< Account>-<random number>
 
 ![OpenVPN01](/assets/images/OpenVPN_04.png)
 
@@ -129,7 +129,7 @@ If you are having problems to connect to the VPN server using the default OpenVP
 2. Switch to Shared Account.
 3. Choose your region.
 4. Go to Services → Systems Manager → Parameter Store.
-5. Click on --> /openvpn-<Account>/REVOKE_USERS → Edit.
+5. Click on --> /openvpn-< Account>/REVOKE_USERS → Edit.
 ![OpenVPN01](/assets/images/OpenVPN_11.png)
 6. Write down your username
 ![OpenVPN01](/assets/images/OpenVPN_12.png)
