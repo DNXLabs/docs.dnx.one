@@ -49,7 +49,7 @@ To download this file:
 
 1. Access AWS Console → < Account> 
 2. S3
-3. Find a bucket called openvpn-< Account>-<random number>
+3. Find a bucket called openvpn-< Account>-< random number>
 
 ![OpenVPN01](/assets/images/OpenVPN_04.png)
 
