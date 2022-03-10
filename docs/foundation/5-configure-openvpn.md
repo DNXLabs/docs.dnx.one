@@ -8,10 +8,10 @@ has_children: true
 
 # DNX Tutorial - How To manage the OpenVPN module
 
-| Version  | 1.2             |
+| Version  | 1.3             |
 | -------- | --------------- |
 | Author   | Pietro Marmelo  |
-| Revision | Pietro Marmelo  |
+| Revision | Marcus Nogueira |
 
 ## This tutorial aims to show how to create and revoke users in SSM in order to access the Open VPN.
 
@@ -23,14 +23,15 @@ Topics:
 ## Create a new user certificate.
 
  Log into AWS Console.
-1. Switch to Shared Account
+1. Switch to the Account that you want to create a new User
+For example: If you want to create a new user in the nonprod account, Switch to Nonprod Account. 
 2. Choose your region
 3. Go to Services → Systems Manager → Parameter Store
 
 ![OpenVPN01](/assets/images/OpenVPN_01.png)
 
 
-## Click on --> /openvpn-shared-services/USERS → Edit
+## Click on --> /openvpn-<Account>/USERS → Edit
 
 ![OpenVPN01](/assets/images/OpenVPN_02.png)
 
@@ -48,7 +49,7 @@ To download this file:
 
 1. Access AWS Console → Shared Account
 2. S3
-3. Find a bucket called openvpn-shared-services-<random number>
+3. Find a bucket called openvpn-<account>-<random number>
 
 ![OpenVPN01](/assets/images/OpenVPN_04.png)
 
@@ -128,7 +129,7 @@ If you are having problems to connect to the VPN server using the default OpenVP
 2. Switch to Shared Account.
 3. Choose your region.
 4. Go to Services → Systems Manager → Parameter Store.
-5. Click on --> /openvpn-shared-services/REVOKE_USERS → Edit.
+5. Click on --> /openvpn-<account>/REVOKE_USERS → Edit.
 ![OpenVPN01](/assets/images/OpenVPN_11.png)
 6. Write down your username
 ![OpenVPN01](/assets/images/OpenVPN_12.png)
