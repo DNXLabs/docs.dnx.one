@@ -24,14 +24,14 @@ Topics:
 
  Log into AWS Console.
 1. Switch to the Account that you want to create a new User
-For example: If you want to create a new user in the nonprod account, Switch to Nonprod Account. 
+* For example: If you want to create a new user in the nonprod account, Switch to Nonprod Account. 
 2. Choose your region
 3. Go to Services → Systems Manager → Parameter Store
 
 ![OpenVPN01](/assets/images/OpenVPN_01.png)
 
 
-## Click on --> /openvpn-<Account>/USERS → Edit
+## Click on --> /openvpn-< Account > /USERS → Edit
 
 ![OpenVPN01](/assets/images/OpenVPN_02.png)
 
@@ -47,9 +47,9 @@ When a user is added, OpenVPN Server creates a ".ovpn" and ".mfa" files to an S3
 
 To download this file:
 
-1. Access AWS Console → Shared Account
+1. Access AWS Console → < Account > 
 2. S3
-3. Find a bucket called openvpn-<account>-<random number>
+3. Find a bucket called openvpn-< account >-<random number>
 
 ![OpenVPN01](/assets/images/OpenVPN_04.png)
 
