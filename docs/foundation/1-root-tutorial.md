@@ -42,18 +42,18 @@ https://dnx-assets-prod.s3-ap-southeast-2.amazonaws.com/assets/dnx-master-role.y
 
 6. Click Next.
 7. Insert the stack name "dnx-root".
-8. In the Parameters area we have five options to choose (AccountCreationOnly, Admin, Billing, CFDeploy and OrganizationAccountAccessRoleName). By default our stack will set up a full access role and grant DNX access for Billing. Click Next.
-
-* AccountCreationOnly gives permission to DNX to create only new accounts inside the Master Account. Default "False".
-** Admin access is required to build all Foundations features (default permission). Default "True".
-*** Billing gives DNX permission to access the billing service and create cost reports. Default "True".
-**** CFDeploy gives DNX permission to access the new accounts. Default "True".
-***** OrganizationAccountAccessRoleName default role name used by DNX to assume new roles. Leave as default.
+8. In the Parameters area we have five options to choose:
+   1.  AccountCreationPolicy - Gives permission to DNX to create only new accounts inside the Master Account. Default "False".
+   2.  Admin - Admin access is required to build all Foundations features (default permission). Default "True".
+   3.  CFDeploy - Creates an IAM Role to allow deploying DNX access to defined subaccounts. Default "True".
+   4.  OrgName - Provided by DNX.
+   5.  OrganizationAccountAccessRoleName - Name of Organization Account Access Role that DNX will be able to assume role. Leave as default.
+9.  By default our stack will set up a full access role and grant DNX access for Billing. Click Next.
 
 ![Image](/assets/images/preprojecttasksimage4.png)
 
-9. On Configure stack options click Next.
-10. On the Review page, mark the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names" and click in Create stack.
+1. On Configure stack options click Next.
+2.  On the Review page, mark the checkbox "I acknowledge that AWS CloudFormation might create IAM resources with custom names" and click in Create stack.
 
 ![Image](/assets/images/preprojecttasksimage5.png)
 
